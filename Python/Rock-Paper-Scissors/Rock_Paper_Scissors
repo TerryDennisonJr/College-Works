@@ -1,0 +1,95 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Jan 21 16:37:17 2022
+
+@author: terrydennison
+"""
+
+
+def rps():
+
+    import time
+    import random
+
+    global choice2
+    print("RPS!")
+    print("1: Rock  \t2: Paper  \t3: Scissors")
+
+    choice = input("Please select your choice: ")
+
+    time.sleep(1)
+    if(choice == str(1)):
+        print("\nRock")
+
+        choice2 = random.randint(2, 3)
+
+        print("\nComputer chooses...")
+
+        time.sleep(2)
+
+        if(choice2 == 2):
+            print('\nPaper')
+
+        if(choice2 == 3):
+            print('\nScissors')
+
+        time.sleep(2)
+
+    if (choice == '1' and choice2 == 2):
+        print("\nComputer Wins!")
+    if (choice == '1' and choice2 == 3):
+        print("\nPlayer 1 Wins!")
+
+    if(choice == str(2)):
+        print("\nPaper")
+        x = '13'
+        choice2 = random.choice(x)
+
+        time.sleep(1)
+        print("\nComputer chooses...")
+
+        time.sleep(3)
+
+        if(choice2 == str(1)):
+            print('\nRock')
+
+        if(choice2 == str(2)):
+            print('\nPaper')
+
+        if(choice2 == str(3)):
+            print('\nScissors')
+        time.sleep(1)
+
+    if (choice == str(2) and choice2 == str(3)):
+        print("\nComputer Wins!")
+    if (choice == str(2) and choice2 == str(1)):
+        print("\nPlayer 1 Wins!")
+
+    if(choice == str(3)):
+        print("\nScissors")
+        x = '12'
+        choice2 = random.choice(x)
+
+        time.sleep(1)
+        print("\nComputer chooses...")
+
+        time.sleep(3)
+
+        if(choice2 == str(1)):
+            print('\nRock')
+
+        if(choice2 == str(2)):
+            print('\nPaper')
+
+        if(choice2 == str(3)):
+            print('\nScissors')
+        time.sleep(1)
+
+    if (choice == str(3) and choice2 == str(1)):
+        print("\nComputer Wins!")
+    if (choice == str(3) and choice2 == str(2)):
+        print("\nPlayer 1 Wins!")
+
+
+rps()
